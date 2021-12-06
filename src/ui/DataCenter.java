@@ -224,22 +224,8 @@ public class DataCenter{
 				name = "ICESI";
 				nit = "1010100101";
 			}
-
 			String rentalNumber = myCenter.rentMiniRoom(day, month, year, servers, cache, processors, ram, disks, disksCapacity, brand, surcharge, roomNumber, corporateUse);
-			
 			myCenter.registerCompanyToRent(rentalNumber, name, nit);
-			/*
-			[listo] cambiar de estado el cuarto cuando se alquile
-
-			[listo] verificar que el cuarto está disponible
-
-			[listo] el constructor de la renta solo tiene el valor mensual, pero hay que crear los servidores para el cuarto (varios iguales, 
-			usar arraylist en el cuarto), y [listo] calcular el valor mensual (llamando la posicion que se supone ya estaría)
- 
-			[listo] ya tengo la posición de ambas cosas
-
-			crear la empresa para el registro de renta
-			*/
 			System.out.println("....The rent of the room has been registered....");
 
 		}
