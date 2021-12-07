@@ -197,7 +197,7 @@ public class DataCenter{
 			disks = askForNumber();
 			System.out.println("Disks capacity: (Terabytes)");
 			disksCapacity = askForDecimalNumber();
-			System.out.println("Brand: \n" +
+			System.out.println("Disks brand: \n" +
 				"(1) INTEL \n" +
 				"(2) AMD");
 			brand = askForYesOrNoAnswer();
@@ -219,7 +219,7 @@ public class DataCenter{
 				System.out.println("Name of the company");
 				name = sc.nextLine();
 				System.out.println("Nit of the company");
-				nit = sc.nextLine();
+				nit = "" + askForNumber();
 			}else{
 				name = "ICESI";
 				nit = "1010100101";
@@ -326,7 +326,7 @@ public class DataCenter{
 		String option;
 		int hall = 0;
 		int column = 0;
-		System.out.println("\u001B[37m------------You can turn the rooms off with the options bellow------------\n " + 
+		System.out.println("------------You can turn the rooms off with the options bellow------------\n " + 
 			"Letter L: turn off the first mini-rooms in all corridors, along with the mini-rooms in the first corridor \n " +
 			"Letter Z: turn off the mini-rooms in the first and last aisles, along with the mini-rooms on the reverse diagonal\n " +
 			"Letter H: turn off the mini-rooms located in the odd-numbered hallways (A,C,E,G)\n " +
@@ -368,7 +368,7 @@ public class DataCenter{
 			validInput = true;
 			option = sc.nextLine().toUpperCase();
 			if (!option.equals("L") && !option.equals("Z") && !option.equals("H") && !option.equals("O") && !option.equals("M") && !option.equals("P")) {
-				System.out.println(option + " does not belong to the allowed options");
+				System.out.println("\"" + option + "\" does not belong to the allowed options");
 				validInput = false;
 			}
 		}while(!validInput);
